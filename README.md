@@ -5,7 +5,7 @@ Un foro de League of Legends interactivo
 * Crear Usuario y Login, permite mantener una sesión para que se sepa quién ha publicado qué
 * Sistema de cookies: almacenan la información del usuario durante un año y la guardan también en un archivo txt
 * Permite subir publicaciones, imágenes, cambiar la foto del usuario, etc
-* Generación de páginas con php?id para cada publicacion
+* Generación de páginas con php?id para cada publicación
 # JavaScript
 * Menú desplegable usando "toggle"
 * Actualizar la información en pantalla de forma asíncrona, como puede ser al borrar una publicación
