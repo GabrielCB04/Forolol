@@ -1,7 +1,3 @@
--- Crear la base de datos
-CREATE DATABASE IF NOT EXISTS forolol;
-USE forolol;
-
 -- Crear la tabla USUARIOS
 CREATE TABLE USUARIOS (
     id_usr INT AUTO_INCREMENT PRIMARY KEY,
@@ -37,20 +33,3 @@ CREATE TABLE RESPUESTAS (
     FOREIGN KEY (id_publi) REFERENCES PUBLICACIONES(id_publi),
     FOREIGN KEY (id_usr) REFERENCES USUARIOS(id_usr)
 );
-
-
-
--- Crear trigger para contar las respuestas
-
-DELIMITER //
-
-CREATE TRIGGER contador_respuestas
-AFTER INSERT ON respuestas
-FOR EACH ROW
-BEGIN
-    UPDATE publicaciones
-    SET resps_publi = resps_publi + 1
-    WHERE id_publi = NEW.id_publi;
-END //
-
-DELIMITER ;
